@@ -1,0 +1,20 @@
+<div class="tz-gallery container-fluid">
+  <div class="row tz-headline">
+      <!-- {{-- <div class="col-sm-12 col-md-12 news-header">
+          <h1 class="news-title">FREEMAN NEWS</h1>
+      </div> --}}
+       -->
+  </div>
+  <div class="row">
+
+
+
+
+          <div *ngFor="let n of news" class="col-sm-6 col-md-4">
+              <a class="lightbox" routerLink="/news/{{n.id}}">
+              <img src="{{n.imagesRoute}}/0.jpg" alt="Park">
+              </a>
+          </div>
+  </div>
+
+</div>

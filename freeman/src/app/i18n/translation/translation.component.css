@@ -1,0 +1,18 @@
+.links-idioma {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.links-idioma a {
+    color: white;
+    cursor: pointer;
+}
+
+.links-idioma a.active-lang {
+    color: white !important;
+}
+
+.links-idioma a {
+    color: gray;
+}
