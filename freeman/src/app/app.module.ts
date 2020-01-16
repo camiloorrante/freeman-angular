@@ -12,14 +12,19 @@ import { HomeComponent } from './pages/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NewsComponent } from './pages/news/news.component';
 import { NewsDetailComponent } from './pages/news-detail/news-detail.component';
+import { ReplacePipe } from './pipes/replace.pipe';
+import { VideoComponent } from './pages/video/video.component';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
+import { MapComponent } from './pages/map/map.component';
+import { BrochureComponent } from './pages/brochure/brochure.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'news',      component: NewsComponent },
-  //{ path: 'news/:id',      component: NewsDetailComponent },
-  // { path: 'video',      component: HeroDetailComponent },
-  // { path: 'map',      component: HeroDetailComponent },
-  // { path: 'brochure',      component: HeroDetailComponent },
+  { path: 'news/:id',      component: NewsDetailComponent },
+  { path: 'video',      component: VideoComponent },
+  { path: 'map',      component: MapComponent },
+  { path: 'brochure',      component: BrochureComponent },
   // { path: 'contact',      component: HeroDetailComponent },
   // { path: '**', component: PageNotFoundComponent }
 ];
@@ -31,7 +36,12 @@ const appRoutes: Routes = [
     TranslationComponent,
     HomeComponent,
     NewsComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+    ReplacePipe,
+    VideoComponent,
+    SafeUrlPipe,
+    MapComponent,
+    BrochureComponent
   ],
   imports: [  
     BrowserModule,
@@ -45,10 +55,7 @@ const appRoutes: Routes = [
         deps: [HttpClient]
       }
     }),
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

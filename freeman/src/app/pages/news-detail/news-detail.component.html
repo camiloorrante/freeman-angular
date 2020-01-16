@@ -1,3 +1,12 @@
-<p>
-  news-detail works!
-</p>
+<section>
+  <div class="tz-gallery container-fluid">
+      <div class="row">
+          <div *ngFor="let p of originalItems" class="col-sm-6 col-md-3">
+              <a class="lightbox" href="{{ p }}">
+              <img src="{{ p | replace : 'Originales': 'Miniaturas'}}">
+              </a>
+          </div>
+      </div>
+
+  </div>
+ </section>
